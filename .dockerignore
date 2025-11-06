@@ -9,11 +9,6 @@ yarn-error.log*
 out
 build
 
-# Environment
-.env
-.env.local
-.env*.local
-
 # Git
 .git
 .gitignore
