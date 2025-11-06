@@ -66,7 +66,6 @@ export default function MonitoringPage() {
           s.ShardID = firstShardId;
           return s;
         })
-        console.log("Recent sessions:", sessions);
         setRecentSessions(sessions);
       }
     } catch (err) {
@@ -122,7 +121,7 @@ export default function MonitoringPage() {
     activeShards: shards.filter((s) => s.Status === "active").length,
     totalValidators: l1Status?.validator_count || l1Nodes.length,
     activeValidators: l1Nodes.filter((n) => n.status === "active" || n.status === "online").length,
-    totalSessions: shards.reduce((sum, shard) => sum + (shard.session_count || 0), 0),
+    totalSessions: shards.reduce((sum, shard) => sum + (shard.SessionCount || 0), 0),
     blockHeight: l1Status?.block_height || 0,
   };
 
