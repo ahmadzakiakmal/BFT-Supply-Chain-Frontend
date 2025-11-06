@@ -165,7 +165,7 @@ export default function OperatorPage() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto pb-10">
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">
           Operator Interface
