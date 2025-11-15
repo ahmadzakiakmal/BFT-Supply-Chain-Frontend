@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Shield, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function ValidatePackageStep({ onValidate, loading, sessionData }) {
-  const [signature, setSignature] = useState('');
+  const [signature, setSignature] = useState(sessionData.signature || "");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,7 +46,7 @@ export default function ValidatePackageStep({ onValidate, loading, sessionData }
                 required
               />
               <p className="text-xs text-gray-500 mt-1">
-                💡 Try: sig_acme_electronics_001 or sig_global_tech_002
+                💡 Signature is automatically filled
               </p>
             </div>
 

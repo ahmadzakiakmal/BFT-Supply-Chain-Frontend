@@ -66,9 +66,12 @@ export default function OperatorPage() {
     setError(null);
     try {
       const response = await shardClient.scanPackage(sessionData.sessionId, packageId);
+      console.log(response);
+      console.log(response.supplier_signature);
       setSessionData((prev) => ({
         ...prev,
         packageInfo: response,
+        signature: response.supplier_signature
       }));
       completeStep(2);
     } catch (err) {
